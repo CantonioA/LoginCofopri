@@ -36,7 +36,12 @@ body,
 html {
     height: 100%;
     font-family: Poppins-Regular, sans-serif;
-    background: #ffdc00;
+    background-image: url('../img/fondo_amarillo_01.jpg');
+    background-position: center;
+    /* Center the image */
+    background-repeat: no-repeat;
+    /* Do not repeat the image */
+    background-size: cover;
 }
 
 
@@ -309,7 +314,7 @@ iframe {
     z-index: -1;
     width: 300%;
     height: 100%;
-    background: #1da1f2;
+    background: #134390;
     top: 0;
     left: -100%;
     -webkit-transition: all 0.4s;
@@ -341,7 +346,7 @@ iframe {
 }
 
 .login100-form-btn:hover {
-    background: #2f00ff;
+    background: #3176e6;
 }
 
 
@@ -359,7 +364,7 @@ iframe {
 /* Custom */
 
 .banner2 {
-    background-image: linear-gradient( rgba(96, 130, 223, 0.5), rgba(79, 63, 149, 0.685)), url(https://i.ytimg.com/vi/VmtRxRc3vs0/maxresdefault.jpg);
+    background-image: url('../img/fondo_azul_01.jpg');
     background-position: center;
     /* Center the image */
     background-repeat: no-repeat;
