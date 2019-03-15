@@ -21,6 +21,21 @@
     src: url('../fonts/poppins/Poppins-SemiBold.ttf');
 }
 
+@font-face {
+    font-family: Roboto-Condensed;
+    src: url('../fonts/roboto/Roboto-Condensed.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url('../fonts/roboto/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url('../fonts/roboto/Roboto-Regular.ttf');
+}
+
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
@@ -48,8 +63,8 @@ html {
 /*---------------------------------------------*/
 
 a {
-    font-family: Poppins-Regular;
-    font-size: 14px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
     line-height: 1.7;
     color: #134390;
     margin: 0px;
@@ -197,16 +212,16 @@ iframe {
 }
 
 .label-input100 {
-    font-family: Poppins-Regular;
-    font-size: 14px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
     color: #333333;
     line-height: 1.5;
     padding-left: 7px;
 }
 
 .input100 {
-    font-family: Poppins-Medium;
-    font-size: 16px;
+    font-family: Roboto-Regular;
+    font-size: 13px;
     color: #333333;
     line-height: 1.2;
     display: block;
@@ -324,8 +339,8 @@ iframe {
 }
 
 .login100-form-btn {
-    font-family: Poppins-Medium;
-    font-size: 16px;
+    font-family: Roboto-Light;
+    font-size: 13px;
     color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
