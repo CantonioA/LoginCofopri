@@ -2,26 +2,6 @@
 [ FONT ]*/
 
 @font-face {
-    font-family: Poppins-Regular;
-    src: url('../fonts/poppins/Poppins-Regular.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Medium;
-    src: url('../fonts/poppins/Poppins-Medium.ttf');
-}
-
-@font-face {
-    font-family: Poppins-Bold;
-    src: url('../fonts/poppins/Poppins-Bold.ttf');
-}
-
-@font-face {
-    font-family: Poppins-SemiBold;
-    src: url('../fonts/poppins/Poppins-SemiBold.ttf');
-}
-
-@font-face {
     font-family: Roboto-Condensed;
     src: url('../fonts/roboto/Roboto-Condensed.ttf');
 }
@@ -56,7 +36,7 @@ html {
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
-    background-size: cover;
+    background-size: auto;
 }
 
 
@@ -96,10 +76,10 @@ h6 {
 }
 
 p {
-    font-family: Poppins-Regular;
+    font-family: Roboto-Light;
     font-size: 14px;
     line-height: 1.7;
-    color: #666666;
+    color: white !important;
     margin: 0px;
 }
 
@@ -180,7 +160,7 @@ iframe {
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    height: 500px;
+    height: 615px;
 }
 
 
@@ -194,8 +174,8 @@ iframe {
 
 .login100-form-title {
     display: block;
-    font-family: Poppins-Bold;
-    font-size: 39px;
+    font-family: Roboto-Condensed;
+    font-size: 20pt;
     color: #134390;
     line-height: 1.2;
     text-align: center;
@@ -340,7 +320,8 @@ iframe {
 
 .login100-form-btn {
     font-family: Roboto-Light;
-    font-size: 13px;
+    font-size: 14px;
+    font-weight: bold;
     color: #fff;
     line-height: 1.2;
     text-transform: uppercase;
@@ -369,9 +350,14 @@ iframe {
 [ Responsive ]*/
 
 @media (max-width: 576px) {
-    .wrap-login100 {
-        padding-left: 15px;
-        padding-right: 15px;
+    .p-l-55 {
+        padding-left: 15px !important;
+    }
+    .p-r-55 {
+        padding-right: 15px !important;
+    }
+    .mensaje {
+        width: 110% !important;
     }
 }
 
@@ -384,10 +370,49 @@ iframe {
     /* Center the image */
     background-repeat: no-repeat;
     /* Do not repeat the image */
-    background-size: cover;
+    background-size: auto;
     /* Resize the background image to cover the entire container */
 }
 
 .contenido {
     height: 50vh;
+}
+
+.p-l-55 {
+    padding-left: 55px;
+}
+
+.p-r-55 {
+    padding-right: 55px;
+}
+
+.p-t-65 {
+    padding-top: 65px;
+}
+
+.p-b-54 {
+    padding-bottom: 54px;
+}
+
+.p-b-49 {
+    padding-bottom: 49px;
+}
+
+.m-b-23 {
+    margin-bottom: 23px;
+}
+
+.p-t-8 {
+    padding-top: 8px;
+}
+
+.p-b-31 {
+    padding-bottom: 31px;
+}
+
+.mensaje {
+    margin-top: 20px;
+    width: 425px;
+    position: absolute !important;
+    background: rgba(22, 65, 147, 1) !important;
 }

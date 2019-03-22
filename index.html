@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" integrity="sha384-Mmxa0mLqhmOeaE8vgOSbKacftZcsNYDjQzuCOm6D02luYSzBG8vpaOykv9lFQ51Y" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--==============================================style="background-image: url('images/bg-01.jpg');"=================================================-->
 </head>
 
@@ -21,45 +22,103 @@
             <div class="banner2">
                 <div class="contenido">
                     <div class="container-login100">
-                        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-                            <form class="login100-form validate-form">
-                                <span class="login100-form-title p-b-49">
+                        <div class="wrap-login100 p-r-55 p-t-65 p-b-54">
+                            <form class="login100-form validate-form p-l-55 ">
+                                <span class="login100-form-title " style="padding-bottom: 20px">
 									<img width="80%" src="https://www.cofopri.gob.pe/media/1217/logotipo-cofopri.gif"/>
-									</span>
+                                    </span>
 
-                                <div class="wrap-input100 validate-input m-b-23" data-validate="Username is reauired">
-                                    <span class="label-input100">Usuario</span>
-                                    <input class="input100" type="text" name="username" placeholder="digite su usuario">
-                                    <span class="focus-input100" data-symbol="&#xf206;"></span>
-                                </div>
 
-                                <div class="wrap-input100 validate-input" data-validate="Password is required">
-                                    <span class="label-input100">Contraseña</span>
-                                    <input class="input100" type="password" name="pass" placeholder="digite su contraseña">
-                                    <span class="focus-input100" data-symbol="&#xf190;"></span>
-                                </div>
+                                <span class="login100-form-title" style="padding-top: 10px">
+                                        Sistema integrado de formalización integral
+                                    </span>
+                                <br/>
+                                <div id="form1">
+                                    <div class="wrap-input100  m-b-23" data-validate="Username is reauired">
+                                        <span class="label-input100">Usuario</span>
+                                        <input class="input100" type="text" name="username" placeholder="digite su usuario">
+                                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                                    </div>
 
-                                <div class="text-right p-t-8 p-b-31">
-                                    <a href="#">
-											Se te olvidó tu contraseña?
-										</a>
-                                </div>
+                                    <div class="wrap-input100 " data-validate="Password is required">
+                                        <span class="label-input100">Contraseña</span>
+                                        <input class="input100" type="password" name="pass" placeholder="digite su contraseña">
+                                        <span class="focus-input100" data-symbol="&#xf190;"></span>
+                                    </div>
+                                    <div class="text-right p-t-8 p-b-31">
+                                        <a href="#" onclick="ocultarForm1()">
+                                                    Se te olvidó tu contraseña?
+                                                </a>
+                                    </div>
 
-                                <div class="container-login100-form-btn">
-                                    <div class="wrap-login100-form-btn">
-                                        <div class="login100-form-bgbtn"></div>
-                                        <button class="login100-form-btn">
+
+                                    <div class="container-login100-form-btn ">
+                                        <div class="wrap-login100-form-btn">
+                                            <div class="login100-form-bgbtn"></div>
+
+                                            <button class="login100-form-btn" onclick="mostrarMensaje()">
 												Entrar
 											</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="form2" style="display: none;">
+                                    <div style="color:rgb(14, 4, 59);font-size: 30px;text-align: center;padding-top: 15px">
+                                        <i class="fas fa-home" style=" background: #fce836;
+                                                        padding:20px;
+                                                        border-radius: 50%;"></i>
+                                    </div>
+                                    <br/>
+                                    <span class="login100-form-title" style="padding-top: 10px;font-size: 15px">
+                                            Ingrese la dirección de correo electrónico asociada a su cuenta
+                                        </span>
+                                    <div class="wrap-input100  m-b-23" data-validate="Username is reauired">
+                                        <span class="label-input100">Correo</span>
+                                        <input class="input100" type="text" name="username" placeholder="digite su correo">
+                                        <span class="focus-input100" data-symbol="&#xf206;"></span>
+                                    </div>
+                                    <div class="container-login100-form-btn ">
+                                        <div class="wrap-login100-form-btn">
+                                            <div class="login100-form-bgbtn"></div>
+
+                                            <button type="button" class="login100-form-btn" onclick="mostrarMensajeCorreo()">
+                                                    Enviar
+                                                </button>
+                                        </div>
                                     </div>
                                 </div>
                             </form>
+                            <div class="alert alert-primary mensaje" role="alert" id="alerta" style="display: none">
+
+                                <p style="text-align: center"><i class="fas fa-exclamation-triangle" style="color:white;font-size: 20px;padding-right: 15px"></i>Usuario o contraseña incorrecta</p>
+                            </div>
+                            <div class="alert alert-primary mensaje" role="alert" id="alertaCorreo" style="display: none">
+
+                                <p style="text-align: center"><i class="fas fa-exclamation-triangle" style="color:white;font-size: 20px;padding-right: 15px"></i>Correo electrónico invalido</p>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        function mostrarMensaje() {
+            document.getElementById('alerta').style.display = 'block';
+        }
+
+        function ocultarForm1() {
+            document.getElementById('alerta').style.display = 'none';
+            document.getElementById('form1').style.display = 'none';
+            document.getElementById('form2').style.display = 'block';
+        }
+
+        function mostrarMensajeCorreo() {
+            document.getElementById('alertaCorreo').style.display = 'block';
+            d
+        }
+    </script>
 </body>
 
 </html>
